@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Holidays {
@@ -30,13 +31,26 @@ public class Holidays {
     }
 
     public String getHolidayByDate(String date) {
-
+        if (date.equals("t")) {
+            getAllHolidays();  
+            return null;            
+        }
+        
         for (int i = 0; i < holidays.size(); i++) {
-            if(holidays.get(i).getDate().equals(date)){
+            if (holidays.get(i).getDate().equals(date)) {
                 return holidays.get(i).getTitle();
-            }                  
+            }
         }
         return "Não é Feriado";
+
     }
 
+    public void getAllHolidays(){       
+        
+         for(int i=0; i<holidays.size();i++){
+           String holiday = (holidays.get(i).getDate() + "=>" + holidays.get(i).getTitle());
+           System.out.println(holiday);                      
+        }     
+        
+    }
 }
