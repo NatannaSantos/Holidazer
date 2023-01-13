@@ -32,13 +32,11 @@ public class Holidays {
     public String getHolidayByDate(String date) {
 
         for (int i = 0; i < holidays.size(); i++) {
-            System.out.println(holidays.get(i).getDate());
-            return "banana";
-            
-            // if(holidays(i).getDate== date){
-            // return (holidays.get(i));
-            // }
+            if(holidays.get(i).getDate().equals(date)){
+                return holidays.get(i).getTitle();
+            }                  
         }
+        return "Não é Feriado";
     }
 
 }

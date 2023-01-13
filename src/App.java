@@ -8,8 +8,10 @@ public class App {
         String imputDay = date.next();
 
         Holidays holiday = new Holidays();   
+
+        String title = holiday.getHolidayByDate(imputDay);    
         
-        holiday.getHolidayByDate(imputDay);        
+        System.out.println(title);
 
         //System.out.println(holiday);
 
